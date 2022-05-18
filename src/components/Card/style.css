@@ -1,0 +1,29 @@
+.container-card {
+  display: flex;
+}
+
+.container-card>div {
+  width: calc(100% / 2);
+}
+.container-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.text {
+  padding-left: 6em;
+}
+
+.text h3 {
+  font-size: 1.8em;
+  font-weight: 500;
+  color: hsl(229, 31%, 21%);
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.text p {
+  line-height: 1.4em;
+  padding-bottom: 2.2em;
+}

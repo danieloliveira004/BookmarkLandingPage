@@ -1,0 +1,66 @@
+.title-features {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title-features h2 {
+  font-weight: 500;
+  font-size: 1.8em;
+  color: hsl(229, 31%, 21%);
+  padding-bottom: .6em;
+}
+
+.title-features p {
+  line-height: 1.4em;
+  padding-bottom: 2em;
+}
+
+.buttons-features {
+  text-align: center;
+}
+
+.buttons-features button {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5em 2.5em;
+  font-size: 1em;
+  background: transparent;
+  border-bottom: 1px solid hsl(229, 8%, 60%, .2);
+  cursor: pointer;
+  transition: color, border .5s;
+  margin-bottom: 4em;
+}
+
+.buttons-features button:hover {
+  color: hsl(229, 31%, 21%);
+  border-color: hsl(229, 31%, 21%);
+}
+
+.buttons-features button.active {
+  color: hsl(229, 31%, 21%);
+  border:none;
+}
+
+.buttons-features button.active::after {
+  animation: activer .5s ease-in-out forwards;
+  content: '';
+  display: block;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(0, 94%, 66%);
+}
+
+@keyframes activer {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
