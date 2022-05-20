@@ -23,8 +23,9 @@ const content = [
 // 
 const Card = (props) => (
   <div className="container-card">
-    <div>
-      <img src={url + 'illustration-features-tab-' + (props.id+1) +'.svg'} />
+    <div className="card-img">
+      <img src={url + 'illustration-features-tab-' + (props.id + 1) + '.svg'} />
+      <div className="bg bg-features"></div>
     </div>
     <div className="text">
       <h3>{content[props.id].title}</h3>

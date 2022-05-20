@@ -1,20 +1,6 @@
-.title-features {
-  text-align: center;
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.title-features h2 {
-  font-weight: 500;
-  font-size: 1.8em;
-  color: hsl(229, 31%, 21%);
-  padding-bottom: .6em;
-}
-
-.title-features p {
-  line-height: 1.4em;
-  padding-bottom: 2em;
+.container-card-features {
+  position: relative;
+  max-height: 350px;
 }
 
 .buttons-features {
@@ -29,13 +15,13 @@
   background: transparent;
   border-bottom: 1px solid hsl(229, 8%, 60%, .2);
   cursor: pointer;
-  transition: color, border .5s;
   margin-bottom: 4em;
+  transition-duration: .8s;
 }
 
 .buttons-features button:hover {
-  color: hsl(229, 31%, 21%);
-  border-color: hsl(229, 31%, 21%);
+  color: hsl(0, 94%, 66%);
+  border-color: hsl(0, 94%, 66%);
 }
 
 .buttons-features button.active {
@@ -43,24 +29,46 @@
   border:none;
 }
 
-.buttons-features button.active::after {
-  animation: activer .5s ease-in-out forwards;
+.buttons-features button::after {
   content: '';
   display: block;
   height: 5px;
-  position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: 50%;
   bottom: 0;
+  position: absolute;
   background: hsl(0, 94%, 66%);
 }
 
+.buttons-features button.active::after {
+  animation: activer .5s forwards ease;
+}
+
+/* TEXT IMG*/
+.card-img.animation img{
+  transform: translateX(-50%);
+  animation: move .8s ease;
+}
+
+.text.animation {
+  transform: translateX(50%);
+  animation: move .8s ease;
+}
+ 
 @keyframes activer {
+  to {
+    left: 0;
+    right: 0;
+  }
+}
+
+@keyframes move{
   from {
-    transform: translateY(6px);
+    opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 

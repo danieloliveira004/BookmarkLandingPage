@@ -14,7 +14,7 @@ const FrontCover = () => (
         </div>
         <div className="front-img">
           <img src="assets/illustration-hero.svg" />
-          <div className="bg-cover"></div>
+          <div className="bg bg-cover"></div>
         </div>
       </div>
     </div>

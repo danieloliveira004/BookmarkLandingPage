@@ -1,15 +1,30 @@
 .container-card {
   display: flex;
+  height: 100%;
 }
 
 .container-card>div {
   width: calc(100% / 2);
 }
-.container-card img {
+
+.card-img {
+  position: relative;
+}
+
+.card-img img {
   width: 100%;
-  max-height: 400px;
+  height: 100%;
   object-fit: contain;
 }
+
+.bg-features {
+  height: 350px;
+  top: 60px;
+  right: 130px;
+  border-bottom-right-radius: 20em;
+  border-top-right-radius: 20em;
+}
+
 
 .text {
   padding-left: 6em;

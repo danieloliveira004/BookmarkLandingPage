@@ -13,9 +13,12 @@ const Header = () => (
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#" className="btn login">Login</a></li>
+            <li><a href="#" className="btn btn-red">Login</a></li>
           </ul>
         </nav>
+        <div id="burguer">
+          <img src="assets/icon-hamburger.svg" />
+        </div>
       </div>
       </div>
   </header>

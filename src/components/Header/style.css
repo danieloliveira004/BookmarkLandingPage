@@ -17,10 +17,45 @@ header {
   text-transform: uppercase;
   font-size: .8em;
   letter-spacing: 1px;
-  color: hsl(229, 31%, 21%);
+  transition-duration: .4s;
 }
 
-.login {
-  background: hsl(0, 94%, 66%);
-  color: #fff !important;
+.navbar-nav ul a:not(.btn-red):hover {
+  color: hsl(0, 94%, 66%);
+}
+
+.navbar-nav ul a:not(.btn-red) {color: hsl(229, 31%, 21%);}
+
+#burger {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 800px) {
+  #burger {display: block;}
+
+  .navbar-nav {
+    position: absolute;
+    top:0; left: 0; right: 0;
+    height: 100vh;
+    background-color: hsl(229, 31%, 21%, .9);
+  }
+
+  .navbar-nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav li {
+    border-top: 2px solid hsl(229, 8%, 60%, .4);
+  }
+
+  .navbar-nav li a:not(.btn){
+    display: inline-block;
+    padding: 1.2em 0;
+    color: #f7f7f7;
+  }
 }
