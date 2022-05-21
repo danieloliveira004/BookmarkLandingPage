@@ -8,12 +8,19 @@ header {
   align-items: center;
 }
 
+#burguer {
+  display: none;
+  padding: 1em;
+  z-index: 200;
+}
+
 .navbar-nav ul{
   display: flex;
   gap: 45px;
 }
 
 .navbar-nav ul a {
+  display: inline-block;
   text-transform: uppercase;
   font-size: .8em;
   letter-spacing: 1px;
@@ -32,30 +39,51 @@ header {
 }
 
 @media (max-width: 800px) {
-  #burger {display: block;}
+  .navbar.active a:first-of-type {
+    z-index: 150;
+  }
+  .navbar.active .logo-color path,  .navbar.active .logo-color circle {fill: #f7f7f7;}
+  .navbar.active .logo-color2 {fill: #252b46 !important;}
+
+  #burguer {display: block;}
 
   .navbar-nav {
+    display: none;
     position: absolute;
     top:0; left: 0; right: 0;
     height: 100vh;
-    background-color: hsl(229, 31%, 21%, .9);
+    background-color: hsl(229, 31%, 21%, .95);
+    padding: 7.4em 1.8em;
+    z-index: 100;
   }
+
+  .navbar.active .navbar-nav {display: flex;}
 
   .navbar-nav ul{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
     width: 100%;
     text-align: center;
   }
 
   .navbar-nav li {
-    border-top: 2px solid hsl(229, 8%, 60%, .4);
+    border-top: 1px solid hsl(229, 8%, 60%, .4);
   }
 
   .navbar-nav li a:not(.btn){
     display: inline-block;
     padding: 1.2em 0;
+    font-size: 1.1em;
     color: #f7f7f7;
+  }
+
+  .navbar-nav .btn-red {
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 1.2em;
+    background: transparent;
+    border: 2px solid #f7f7f7;
+    box-shadow: none;
   }
 }
